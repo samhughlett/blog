@@ -1,0 +1,11 @@
+<h1>you have landed at the blog site</h1>
+
+<% blog.forEach(function(blog){ %>
+   <div>
+       <h2><%= blog.title%></h2>
+        <p><%=blog.created%></p>
+       <img src="<%=blog.image%>">
+       <p><%=blog.body%></p>
+   </div>
+
+<% }); %>
