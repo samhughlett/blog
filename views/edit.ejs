@@ -1,0 +1,23 @@
+<%  include partials/header %>
+<div class="ui main text container big inverted form segment">
+    <div class="ui huge header">Edit Your Blog</div>
+        <form class="ui big form"action="/blogs/<%=blod._id%>?_method=PUT" method="put">
+            <div class="field">
+                <label>Title</label>
+                <input type="text" name="blog[title]" value="<%=blog.title%>"></input>
+            </div>
+            <div class="field">
+                <label class>Image</label>
+                <input type="text" name="blog[image]" value="<%=blog.image%>"></input>
+            </div>
+            <div class="field">
+                <label>Body</label>
+                <textarea name="blog[body]"><%=blog.title%></textarea>
+            </div>
+            
+            <button class="ui inverted big button purple" type="submit">Post Edited Blog</button>
+        </form>
+    </div>
+</div>
+
+<%  include partials/footer %>

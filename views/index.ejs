@@ -1,11 +1,18 @@
-<h1>you have landed at the blog site</h1>
+<% include partials/header %>
+<div class="ui container blog  main text container big inverted segment">
+<h1>Welcome to my blog!</h1>
 
-<% blog.forEach(function(blog){ %>
-   <div>
-       <h2><%= blog.title%></h2>
-        <p><%=blog.created%></p>
-       <img src="<%=blog.image%>">
-       <p><%=blog.body%></p>
-   </div>
-
-<% }); %>
+    <% blogs.forEach(function(blog){ %>
+    <br>
+           <div class="header">
+               <h2><%= blog.title%></h2>
+           </div>
+            <p class="date"><%=blog.created.toDateString()%></p>
+           <img class="ui fluid image" src="<%=blog.image%>">
+           <p><%=blog.body.substring(0, 250)%> ...</p>
+           <a class="ui small button purple inverted" href="/blogs/<%=blog._id%>">See More</a>
+           <hr>
+    <% }); %>
+</div>
+<br>
+<% include partials/footer %>
