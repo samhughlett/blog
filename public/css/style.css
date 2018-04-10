@@ -1,0 +1,19 @@
+body{
+    background-color:rgb(129, 39, 156);
+}
+.date{
+    font-family: 'Indie Flower', cursive;
+    font-size:15px;
+}
+.test{
+    font-family: 'Lobster', cursive;
+}
+.icon{
+    font-size: 2em;
+}
+.blog{
+    text-align:center;
+}
+#delete{
+    display:inline;
+}

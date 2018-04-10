@@ -1,7 +1,7 @@
 <%  include partials/header %>
 <div class="ui main text container big inverted form segment">
     <div class="ui huge header">Edit Your Blog</div>
-        <form class="ui big form"action="/blogs/<%=blod._id%>?_method=PUT" method="put">
+        <form class="ui big form"action="/blogs/<%=blog._id%>?_method=PUT" method="POST">
             <div class="field">
                 <label>Title</label>
                 <input type="text" name="blog[title]" value="<%=blog.title%>"></input>

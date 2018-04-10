@@ -1,15 +1,15 @@
 <% include partials/header %>
 <div class="ui container blog  main text container big inverted segment">
-<h1>Welcome to my blog!</h1>
+<h1 class="test">Welcome to my blog!</h1>
 
     <% blogs.forEach(function(blog){ %>
     <br>
-           <div class="header">
+           <div class="header test">
                <h2><%= blog.title%></h2>
            </div>
-            <p class="date"><%=blog.created.toDateString()%></p>
+            <p class="date">Created: <%=blog.created.toDateString()%></p>
            <img class="ui fluid image" src="<%=blog.image%>">
-           <p><%=blog.body.substring(0, 250)%> ...</p>
+           <p><%-blog.body.substring(0, 250)%> ...</p>
            <a class="ui small button purple inverted" href="/blogs/<%=blog._id%>">See More</a>
            <hr>
     <% }); %>
